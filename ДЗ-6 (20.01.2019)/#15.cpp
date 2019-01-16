@@ -20,10 +20,13 @@ int main()
 	{
 		for (int j = 7; j <= N; j++)
 		{
-			if ((F[i] * F[j - 1]) < (F[i] * F[j]))
-				x = F[i] + F[j - 1];
-			else
-				x = F[i] + F[j];
+			if (F[j] - F[i] >= 5)
+			{
+				if ((F[i] * F[j - 1]) < (F[i] * F[j]))
+					x = F[i] + F[j - 1];
+				else
+					x = F[i] + F[j];
+			}
 		}
 	}
 	cout << x;
